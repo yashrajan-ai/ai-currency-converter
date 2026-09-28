@@ -1,5 +1,11 @@
 # 🌍 AI Currency Converter — LangChain Tool Calling + Streamlit
 
+## 🚀 Live Demo
+
+👉 [**Try the AI Currency Converter →**](https://ai-currency-converter1.streamlit.app/)
+
+[![Live Demo](https://img.shields.io/badge/🚀%20Live-Demo-brightgreen)](https://ai-currency-converter1.streamlit.app/)
+
 > **An interactive AI-powered currency converter that combines LangChain tool calling, Hugging Face LLMs, ExchangeRate-API, and Streamlit to perform real-world currency conversions.**
 
 <p align="center">
