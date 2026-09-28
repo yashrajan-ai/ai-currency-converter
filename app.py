@@ -8,7 +8,7 @@ from langchain_core.tools import tool
 from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 
 
-load_dotenv()
+#load_dotenv()
 # -------------------------------------------------------------------
 # Streamlit configuration
 # -------------------------------------------------------------------
@@ -80,7 +80,7 @@ st.markdown(
 # -------------------------------------------------------------------
 @st.cache_data(ttl=3600)
 def get_supported_currencies() -> dict:
-    api_key = os.getenv("EXCHANGE_RATE_API_KEY")
+    api_key = st.secrets["EXCHANGE_RATE_API_KEY"]
 
     if not api_key:
         raise ValueError("EXCHANGE_RATE_API_KEY is missing.")
@@ -163,7 +163,7 @@ def convert(base_currency_value: float, conversion_rate: float) -> float:
 # -------------------------------------------------------------------
 @st.cache_resource
 def get_llm():
-    token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+    token = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 
     if not token:
         return None
